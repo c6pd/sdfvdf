@@ -57,7 +57,7 @@ local Tables = {
  local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons
  
  local library = {
-    Title = 'verse <font color="rgb(189, 172, 255)">.solutions</font>',
+    Title = 'test<font color="rgb(189, 172, 255)">.solutions</font>',
     AnimatedText = false,
     keybind = Enum.KeyCode.End,
     Colors = {
