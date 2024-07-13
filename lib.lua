@@ -209,7 +209,7 @@ local Tables = {
                       end)
  
                       function library:Tween(...) TweenService:Create(...):Play() end
-                         function library:addTab(name,image)
+                         function library:addTab(name)
                             local newTab = tabholder.tab:Clone()
                             local newButton = tabviewer.button:Clone()
  
