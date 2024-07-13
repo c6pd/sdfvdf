@@ -57,7 +57,7 @@ local Tables = {
  local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons
  
  local library = {
-    Title = 'test<font color="rgb(189, 172, 255)">.solutions</font>',
+    Title = 'verse <font color="rgb(189, 172, 255)">.solutions</font>',
     AnimatedText = false,
     keybind = Enum.KeyCode.End,
     Colors = {
@@ -138,7 +138,7 @@ local Tables = {
                 wait(0.5)
             end 
         else
-            menu.bg.pre.Text = 'verse <font color="rgb(189, 172, 255)">.solutions</font>'
+            menu.bg.pre.Text = 'verse | <font color="rgb(189, 172, 255)">.solutions</font>'
         end
     end
  end)  
@@ -221,7 +221,6 @@ local Tables = {
                             newButton.Parent = tabviewer
                             newButton.Modal = true
                             newButton.Visible = true
-                            newButton.Image = image
                             newButton.text.Text = name
                             newButton.MouseButton1Click:Connect(function()
                             for i,v in next, library.tabs do v.Visible = v == newTab end
@@ -229,15 +228,11 @@ local Tables = {
                             for i,v in next, library.tabbuttons do
                                local state = v == newButton
                                local tweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
-                               local imageTweenStart = TweenService:Create(v, tweenInfo, {ImageColor3 = Color3.fromRGB(189, 172, 255)})
                                local textTweenStart = TweenService:Create(v.text, tweenInfo, {TextColor3 = Color3.fromRGB(189, 172, 255)})
-                               local imageTweenEnd = TweenService:Create(v, tweenInfo, {ImageColor3 = Color3.fromRGB(0,0,0)})
                                local textTweenEnd = TweenService:Create(v.text, tweenInfo, {TextColor3 = Color3.fromRGB(125, 125, 125)})
                                if state then
-                                  imageTweenStart:Play()
                                   textTweenStart:Play()
-                               else
-                                  imageTweenEnd:Play()
+                               else 
                                   textTweenEnd:Play()
                                end
                             end
