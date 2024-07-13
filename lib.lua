@@ -138,7 +138,7 @@ local Tables = {
                 wait(0.5)
             end 
         else
-            menu.bg.pre.Text = 'verse | <font color="rgb(189, 172, 255)">.solutions</font>'
+            menu.bg.pre.Text = 'verse <font color="rgb(189, 172, 255)">.solutions</font>'
         end
     end
  end)  
